@@ -1,0 +1,86 @@
+{
+  "name": "qcxn-cli",
+  "version": "1.0.4",
+  "description": "启辰新能前端编码规范工程化标准脚手架",
+  "bin": "./lib/cli.js",
+  "main": "./lib/index.js",
+  "scripts": {
+    "dev": "npm run copyfiles && tsc -w",
+    "build": "rmdir /s /q lib && npm run copyfiles && tsc",
+    "copyfiles": "copyfiles -a -u 1 \"src/config/**\" lib",
+    "test": "npm run build && jest",
+    "coverage": "nyc jest --silent --forceExit",
+    "prepublishOnly": "npm run test",
+    "qcxn-cli-scan": "qcxn-cli scan",
+    "qcxn-cli-fix": "qcxn-cli fix"
+  },
+  "files": [
+    "lib/"
+  ],
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  },
+  "keywords": [
+    "qcxn",
+    "lint",
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/command-exists": "^1.2.0",
+    "@types/cross-spawn": "^6.0.2",
+    "@types/ejs": "^3.1.0",
+    "@types/eslint": "^8.4.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/lodash": "^4.14.180",
+    "@types/node": "^14.14.11",
+    "@types/prettier": "^2.4.4",
+    "@types/stylelint": "^14.0.0",
+    "@types/text-table": "^0.2.2",
+    "copyfiles": "^2.4.1",
+    "jest": "^27.5.1",
+    "nyc": "^15.1.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-react": "^7.16.0",
+    "chalk": "^4.1.0",
+    "command-exists": "^1.2.9",
+    "commander": "^6.2.1",
+    "cross-spawn": "^7.0.3",
+    "ejs": "^3.1.5",
+    "qcxn-commitlint-config": "^1.0.2",
+    "qcxn-eslint-config": "^1.0.0",
+    "qcxn-markdownlint-config": "^1.0.1",
+    "qcxn-stylelint-config": "^1.0.2",
+    "execa": "^5.0.0",
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "inquirer": "^7.3.3",
+    "is-docker": "^2.1.1",
+    "lodash": "^4.17.20",
+    "ora": "^5.1.0",
+    "strip-ansi": "^6.0.0",
+    "terminal-link": "^2.1.1",
+    "text-table": "^0.2.0",
+    "vue-eslint-parser": "^7.3.0"
+  },
+  "author": "dongzhiqiang",
+  "homepage": "https://gitee.com/dzq23/coding-engineering#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/dzq23/coding-engineering.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/dzq23/coding-engineering/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "qcxn-cli commit-file-scan",
+      "commit-msg": "qcxn-cli commit-msg-scan"
+    }
+  }
+}

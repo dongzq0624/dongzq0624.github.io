@@ -1,0 +1,24 @@
+{
+  "name": "qcxn-commitlint-config",
+  "version": "1.0.3",
+  "main": "index.js",
+  "description": "启辰新能 Git规范",
+  "keywords": [
+    "qcxn",
+    "commit",
+    "lint"
+  ],
+  "author": "dongzhiqiang",
+  "homepage": "https://gitee.com/dzq23/coding-engineering#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/dzq23/coding-engineering.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/dzq23/coding-engineering/issues"
+  },
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "4.5.0"
+  }
+}

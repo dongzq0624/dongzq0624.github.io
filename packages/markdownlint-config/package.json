@@ -1,0 +1,24 @@
+{
+  "name": "qcxn-markdownlint-config",
+  "version": "1.0.1",
+  "main": "index.json",
+  "description": "启辰新能 文档规范",
+  "keywords": [
+    "qcxn",
+    "markdown",
+    "lint"
+  ],
+  "author": "dongzhiqiang",
+  "homepage": "https://gitee.com/dzq23/coding-engineering.git",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/dzq23/coding-engineering.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/dzq23/coding-engineering/issues"
+  },
+  "peerDependencies": {
+    "markdownlint": "^0.28.1"
+  }
+}

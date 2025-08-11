@@ -1,0 +1,33 @@
+{
+  "name": "qcxn-stylelint-config",
+  "version": "1.0.2",
+  "description": "启辰新能 css规范",
+  "main": "index.js",
+  "keywords": [
+    "qcxn",
+    "style",
+    "lint"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "dongzhiqiang",
+  "homepage": "https://gitee.com/dzq23/coding-engineering.git",
+  "license": "ISC",
+  "peerDependencies": {
+    "stylelint": ">=8.3.0",
+    "stylelint-scss": ">=2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "stylelint": "^14.3.0",
+    "stylelint-scss": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/dzq23/coding-engineering.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/dzq23/coding-engineering/issues"
+  }
+}
