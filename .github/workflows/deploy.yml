@@ -27,5 +27,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs/.vuepress/qcxn
+          folder: docs/.vuepress/dongzq0624
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
